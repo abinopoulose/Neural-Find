@@ -5,24 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
+
+
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
-}
 
 
 
-function poster(Request $request) 
-{   
-    $b=$request->qwerty;
+    function predict(Request $request) 
+    {   
     
-    move_uploaded_file($b, 'D:\development\ai\Brain\Test.jpg');
-    exec('python D:\development\ai\Brain\brain.py 2>&1',$a);
-    $c=json_encode($a);
+    move_uploaded_file($request->img,'..\ai\test.jpg');
+    
+    exec('cd ../ai && python brain.py  2>&1',$cmdoutput);
+    // $c=json_encode($a);
+ 
+    foreach ($cmdoutput as $c)
+        $c=$c;
     return $c;
-}
+    }
 
+}
 
 
 

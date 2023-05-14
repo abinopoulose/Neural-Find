@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 
+Route::post('/predict', [App\Http\Controllers\Controller::class, 'predict']);
 
-Route::post('/poster', [App\Http\Controllers\Controller::class, 'poster']);
+
