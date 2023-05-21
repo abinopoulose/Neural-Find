@@ -14,8 +14,8 @@
 <div class="page">
 
     <div class="header">
-    <img src="{{asset('images/c.jpg')}}" class="header-img">
-    NeuralFind
+    <a href="/" class="header-link">
+        <img src="{{asset('images/c.jpg')}}" class="header-img">
+        NeuralDoc
+    </a>
     </div>
-
-    

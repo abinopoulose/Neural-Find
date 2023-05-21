@@ -29,10 +29,10 @@ predicted = np.argmax(predicted, axis=1)
 result = predicted[0]
 
 if result == 0:
-	print("glioma")
+	print("0")
 elif result == 1:
-	print("meningioma")
+	print("1")
 elif result == 2:
-	print("no-tumor")
+	print("2")
 else: 
-	print("pituitary")
+	print("3")
